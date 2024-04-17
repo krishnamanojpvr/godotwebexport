@@ -12,12 +12,13 @@
         <option value="2">Game 2</option>
         <option value="3">Game 3</option>
         <option value="4">Game 4</option>
+        <option value="5">Game 5</option>
     </select>
     
 </body>
 <script>
     const select = document.getElementById('selectgame');
-    select.addEventListener('change', (event) => {
+    select.addEventListener('click', (event) => {
         const value = event.target.value;
     
         if(value === '1'){
@@ -29,6 +30,9 @@
         }
         else if(value === '4'){
             window.location.href = 'game4';
+        }
+        else if(value === '5'){
+            window.location.href = 'game5';
         }
     });
 </script>
