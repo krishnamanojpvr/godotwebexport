@@ -35,7 +35,7 @@ const staticRouter4 = serveStatic(path.join(__dirname, "shapematchinghtml"), {
   },
 });
 
-const staticRouter5 = serveStatic(path.join(__dirname, "dragndrop6"), {
+const staticRouter5 = serveStatic(path.join(__dirname, "dragndrop"), {
   setHeaders: (res, path) => {
     res.setHeader("Cross-Origin-Opener-Policy", "same-origin");
     res.setHeader("Cross-Origin-Embedder-Policy", "require-corp");
@@ -88,7 +88,7 @@ app.get("/game4", (req, res) => {
   res.sendFile(path.join(__dirname, "shapematchinghtml", "shapematching.html"));
 });
 app.get("/game5", (req, res) => {
-  res.sendFile(path.join(__dirname, "dragndrop6", "DragDrop6.html"));
+  res.sendFile(path.join(__dirname, "dragndrop", "DragDrop7.html"));
 });
 // Start the server
 app.listen(port, () => {
