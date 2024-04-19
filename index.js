@@ -28,12 +28,20 @@ const staticRouter3 = serveStatic(path.join(__dirname, "ge3"), {
   },
 });
 
-const staticRouter4 = serveStatic(path.join(__dirname, "shapematchinghtml"), {
+// const staticRouter4 = serveStatic(path.join(__dirname, "shapematchinghtml"), {
+//   setHeaders: (res, path) => {
+//     res.setHeader("Cross-Origin-Opener-Policy", "same-origin");
+//     res.setHeader("Cross-Origin-Embedder-Policy", "require-corp");
+//   },
+// });
+
+const staticRouter4 = serveStatic(path.join(__dirname, "shphtml"), {
   setHeaders: (res, path) => {
     res.setHeader("Cross-Origin-Opener-Policy", "same-origin");
     res.setHeader("Cross-Origin-Embedder-Policy", "require-corp");
   },
 });
+
 
 const staticRouter5 = serveStatic(path.join(__dirname, "dragndrop"), {
   setHeaders: (res, path) => {
@@ -84,8 +92,11 @@ app.get("/game2", (req, res) => {
 app.get("/game3", (req, res) => {
   res.sendFile(path.join(__dirname, "ge3", "Dynamic Split Screen.html"));
 });
+// app.get("/game4", (req, res) => {
+//   res.sendFile(path.join(__dirname, "shapematchinghtml", "shapematching.html"));
+// });
 app.get("/game4", (req, res) => {
-  res.sendFile(path.join(__dirname, "shapematchinghtml", "shapematching.html"));
+  res.sendFile(path.join(__dirname, "shphtml", "indexi.html"));
 });
 app.get("/game5", (req, res) => {
   res.sendFile(path.join(__dirname, "dragndrop", "DragDrop8.html"));
